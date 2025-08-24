@@ -1134,12 +1134,26 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('mobile-menu-open');
             document.documentElement.classList.add('mobile-menu-open');
             console.log('🔒 mobile-menu-open class added to body and html');
-            // Prevent body scrolling completely
-            document.body.style.overflow = 'hidden';
+            
+            // Store original scroll position and prevent body scrolling completely
+            const scrollY = window.scrollY;
             document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
-            document.body.style.top = `-${window.scrollY}px`;
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
+            document.body.style.overflow = 'hidden';
             console.log('🚫 Body scrolling prevented');
+            
+            // Prevent touch scrolling on mobile devices
+            const preventTouch = function(e) {
+                e.preventDefault();
+            };
+            
+            mobileMenu.addEventListener('touchmove', preventTouch, { passive: false });
+            
+            // Store references for cleanup
+            mobileMenu._scrollY = scrollY;
+            mobileMenu._preventTouch = preventTouch;
             
             // Ensure theme and language switchers are properly initialized
             setTimeout(() => {
@@ -1344,27 +1358,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Function to close mobile menu and restore scroll
+    function closeMobileMenu() {
+        if (!mobileMenu || mobileMenu.classList.contains('hidden')) return;
+        
+        console.log('🔓 Closing mobile menu...');
+        mobileMenu.classList.add('hidden');
+        console.log('📱 Hidden class added to mobile menu');
+        
+        // Remove class from body and html
+        document.body.classList.remove('mobile-menu-open');
+        document.documentElement.classList.remove('mobile-menu-open');
+        console.log('🔓 mobile-menu-open class removed from body and html');
+        
+        // Restore body styles and scroll position
+        const scrollY = mobileMenu._scrollY || 0;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflow = '';
+        console.log('✅ Body scrolling restored');
+        
+        // Remove touch event listener
+        if (mobileMenu._preventTouch) {
+            mobileMenu.removeEventListener('touchmove', mobileMenu._preventTouch);
+        }
+        
+        // Restore scroll position
+        window.scrollTo(0, scrollY);
+        console.log('📍 Scroll position restored to:', scrollY);
+        
+        // Clear stored references
+        delete mobileMenu._scrollY;
+        delete mobileMenu._preventTouch;
+    }
+
     if (mobileMenuClose && mobileMenu) {
         console.log('✅ Mobile menu close button found, adding event listener...');
         mobileMenuClose.addEventListener('click', function() {
             console.log('🎯 Mobile menu close button clicked!');
-            mobileMenu.classList.add('hidden');
-            console.log('📱 Hidden class added to mobile menu');
-            // Remove class from body and html
-            document.body.classList.remove('mobile-menu-open');
-            document.documentElement.classList.remove('mobile-menu-open');
-            console.log('🔓 mobile-menu-open class removed from body and html');
-            // Restore body scrolling
-            const scrollY = document.body.style.top;
-            document.body.style.position = '';
-            document.body.style.width = '';
-            document.body.style.top = '';
-            document.body.style.overflow = '';
-            console.log('✅ Body scrolling restored');
-            // Restore scroll position
-            if (scrollY) {
-                window.scrollTo(0, parseInt(scrollY || '0') * -1);
-            }
+            closeMobileMenu();
         });
     } else {
         console.log('❌ Mobile menu close button not found:', {
@@ -1378,20 +1412,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                // Remove class from body and html
-                document.body.classList.remove('mobile-menu-open');
-                document.documentElement.classList.remove('mobile-menu-open');
-                // Restore body scrolling
-                const scrollY = document.body.style.top;
-                document.body.style.position = '';
-                document.body.style.width = '';
-                document.body.style.top = '';
-                document.body.style.overflow = '';
-                // Restore scroll position
-                if (scrollY) {
-                    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-                }
+                closeMobileMenu();
             }
         });
     });
@@ -1399,20 +1420,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close mobile menu when pressing Escape key
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            // Remove class from body and html
-            document.body.classList.remove('mobile-menu-open');
-            document.documentElement.classList.remove('mobile-menu-open');
-            // Restore body scrolling
-            const scrollY = document.body.style.top;
-            document.body.style.position = '';
-            document.body.style.width = '';
-            document.body.style.top = '';
-            document.body.style.overflow = '';
-            // Restore scroll position
-            if (scrollY) {
-                window.scrollTo(0, parseInt(scrollY || '0') * -1);
-            }
+            closeMobileMenu();
         }
     });
 
