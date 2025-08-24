@@ -2283,11 +2283,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-            speed: 1000, // Slightly slower for smoother transitions
+            effect: 'slide', // Changed from fade to slide for better mobile compatibility
+            speed: 600, // Faster transition for better mobile experience
             grabCursor: true,
             keyboard: {
                 enabled: true,
@@ -2326,19 +2323,58 @@ document.addEventListener('DOMContentLoaded', () => {
                 firstSlideMessage: 'This is the first slide',
                 lastSlideMessage: 'This is the last slide',
             },
-            // Enhanced auto-play behavior
+            // Enhanced mobile behavior and image visibility
             on: {
                 init: function() {
                     // Swiper initialized with auto-play
                     // Ensure carousel is properly sized on mobile
                     this.update();
+                    
+                    // Force visibility of first slide on mobile
+                    const firstSlide = this.slides[this.activeIndex];
+                    if (firstSlide) {
+                        const img = firstSlide.querySelector('img');
+                        if (img) {
+                            img.style.display = 'block';
+                            img.style.visibility = 'visible';
+                            img.style.opacity = '1';
+                            // Ensure image loads
+                            if (!img.complete) {
+                                img.onload = () => {
+                                    img.style.display = 'block';
+                                    img.style.visibility = 'visible';
+                                    img.style.opacity = '1';
+                                };
+                            }
+                        }
+                    }
                 },
                 slideChange: function() {
-                    // Slide changed
+                    // Ensure current slide image is visible - critical for mobile
+                    const currentSlide = this.slides[this.activeIndex];
+                    if (currentSlide) {
+                        const img = currentSlide.querySelector('img');
+                        if (img) {
+                            img.style.display = 'block';
+                            img.style.visibility = 'visible';
+                            img.style.opacity = '1';
+                            img.style.transform = 'none'; // Remove any transforms that might hide the image
+                        }
+                    }
                 },
                 resize: function() {
                     // Update carousel on window resize
                     this.update();
+                    // Re-ensure visibility after resize
+                    const currentSlide = this.slides[this.activeIndex];
+                    if (currentSlide) {
+                        const img = currentSlide.querySelector('img');
+                        if (img) {
+                            img.style.display = 'block';
+                            img.style.visibility = 'visible';
+                            img.style.opacity = '1';
+                        }
+                    }
                 }
             }
         });
