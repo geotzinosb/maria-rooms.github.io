@@ -1,5 +1,14 @@
-// Service Worker for Maria Rooms - Production Optimized - CAROUSEL FIX
-const CACHE_NAME = 'maria-rooms-carousel-fix-v5-' + Date.now();
+// Service Worker for Maria Rooms - DARK MODE THUMBNAIL FIX - FORCE CACHE CLEAR
+const CACHE_NAME = 'maria-rooms-dark-thumbnails-v6-' + Date.now();
+const OLD_CACHES = [
+    'maria-rooms-v2-dev',
+    'maria-rooms-v3-prod',
+    'maria-rooms-v4-prod',
+    'maria-rooms-carousel-fix-v5',
+    'maria-rooms-production',
+    'maria-rooms-staging',
+    'maria-rooms-dev'
+];
 const urlsToCache = [
   '/',
   '/css/style.css',
@@ -35,15 +44,39 @@ const currentPort = self.location.port;
 
 // Skip waiting to activate immediately
 self.addEventListener('install', event => {
+  console.log('Service Worker installing with aggressive cache clearing...');
   self.skipWaiting(); // Force activation
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache);
-      })
-      .catch(error => {
-        console.log('Service Worker cache installation failed:', error);
-      })
+    Promise.all([
+      // Clear all old caches first
+      ...OLD_CACHES.map(cacheName => 
+        caches.delete(cacheName).then(deleted => {
+          if (deleted) {
+            console.log('Deleted old cache:', cacheName);
+          }
+        })
+      ),
+      // Clear any cache that starts with our app name
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            if (cacheName.startsWith('maria-rooms') && cacheName !== CACHE_NAME) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      }),
+      // Then create new cache
+      caches.open(CACHE_NAME)
+        .then(cache => {
+          console.log('Opened new cache:', CACHE_NAME);
+          return cache.addAll(urlsToCache);
+        })
+        .catch(error => {
+          console.error('Cache installation failed:', error);
+        })
+    ])
   );
 });
 

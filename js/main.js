@@ -1963,28 +1963,71 @@ function openImageModal(src, alt) {
     modal.innerHTML = `
         <div class="relative max-w-4xl max-h-full mx-4">
             <img src="${src}" alt="${alt}" class="w-full h-auto max-h-screen object-contain rounded-lg">
-            <button class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl font-bold" onclick="this.parentElement.parentElement.remove()">&times;</button>
+            <button class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl font-bold" onclick="closeImageModal(this.parentElement.parentElement)">&times;</button>
         </div>
     `;
     
+    // Store original scroll position and body overflow
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.overflow = 'hidden';
+    
+    // Prevent touch scrolling on mobile devices
+    const preventTouch = function(e) {
+        e.preventDefault();
+    };
+    
+    modal.addEventListener('touchmove', preventTouch, { passive: false });
+    
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
-            modal.remove();
+            closeImageModal(modal);
         }
     });
     
     document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
     
     // Close modal on escape key
     const handleEscape = function(e) {
         if (e.key === 'Escape') {
-            modal.remove();
-            document.body.style.overflow = 'auto';
-            document.removeEventListener('keydown', handleEscape);
+            closeImageModal(modal);
         }
     };
     document.addEventListener('keydown', handleEscape);
+    
+    // Store references for cleanup
+    modal._scrollY = scrollY;
+    modal._handleEscape = handleEscape;
+    modal._preventTouch = preventTouch;
+}
+
+function closeImageModal(modal) {
+    if (!modal || !modal.parentNode) return;
+    
+    // Restore body styles and scroll position
+    const scrollY = modal._scrollY || 0;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+    
+    // Remove event listeners
+    if (modal._handleEscape) {
+        document.removeEventListener('keydown', modal._handleEscape);
+    }
+    if (modal._preventTouch) {
+        modal.removeEventListener('touchmove', modal._preventTouch);
+    }
+    
+    // Remove modal
+    modal.remove();
+    
+    // Restore scroll position
+    window.scrollTo(0, scrollY);
 }
 
 // Notification system
