@@ -1,5 +1,5 @@
 // Service Worker for Maria Rooms - Production Optimized
-const CACHE_NAME = 'maria-rooms-v3-prod';
+const CACHE_NAME = 'maria-rooms-v4-prod-' + Date.now();
 const urlsToCache = [
   '/',
   '/css/style.css',
