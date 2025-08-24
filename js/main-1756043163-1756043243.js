@@ -1052,16 +1052,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize language system
     initLanguage();
+    
+    // Initialize mobile menu state
+    function initMobileMenu() {
+        if (mobileMenu) {
+            // Always start with menu hidden
+            mobileMenu.classList.add('hidden');
+            console.log('Mobile menu initialized with hidden state');
+        }
+    }
+    
+    // Initialize mobile menu
+    initMobileMenu();
 
     // Mobile menu toggle
     if (mobileMenuButton && mobileMenu) {
-        // Ensure menu is hidden by default on mobile
+        // Ensure menu is hidden by default
         mobileMenu.classList.add('hidden');
+        
+        // Debug logging
+        console.log('Mobile menu initialized, hidden by default');
         
         mobileMenuButton.addEventListener('click', function() {
             // Mobile menu button clicked!
+            console.log('Mobile menu button clicked, removing hidden class');
             mobileMenu.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+            
+            // Verify menu is visible
+            setTimeout(() => {
+                const isVisible = !mobileMenu.classList.contains('hidden');
+                console.log('Mobile menu visibility after click:', isVisible);
+                console.log('Mobile menu classes:', mobileMenu.className);
+            }, 100);
         });
     }
 
