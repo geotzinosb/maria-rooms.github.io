@@ -46,18 +46,6 @@ window.translations = {
         studioApartment6Description: "23m² studio with balcony and garden views. Air conditioning, flat-screen TV, and fully equipped kitchen.",
         maxGuests: "Max 2 guests",
         
-        // Why Choose Section
-        whyChooseTitle: "Why Choose Maria Rooms?",
-        whyChooseSubtitle: "Discover what makes our vacation apartments the perfect choice for your Greek getaway",
-        perfectLocationTitle: "Perfect Location",
-        perfectLocationDesc: "Just 650m from the beautiful beach, 100m from main road for peaceful sleep, surrounded by a tiny forest for natural beauty.",
-        ultimateComfortTitle: "Ultimate Comfort",
-        ultimateComfortDesc: "Fully equipped studios with air conditioning, flat-screen TVs, private balconies, and everything you need for a comfortable stay.",
-        authenticExperienceTitle: "Authentic Experience",
-        authenticExperienceDesc: "Immerse yourself in local culture with Greek hospitality, traditional architecture, and authentic village atmosphere.",
-        specialOfferTitle: "Special Summer Offer",
-        specialOfferDesc: "Book your stay now and enjoy our limited availability rates. Perfect for families, couples, and solo travelers!",
-        
         // Amenities Section
         amenities: "Amenities & Features",
         amenitiesSubtitle: "Everything you need for a comfortable stay",
@@ -115,8 +103,6 @@ window.translations = {
         contactTitle: "Contact Us",
         contactSubtitle: "Ready to book your perfect summer getaway? Get in touch with us for any questions or reservations.",
         sendMessage: "Send Message",
-        messageSent: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
-        messageError: "Sorry, there was an error sending your message. Please try again or contact us directly.",
         address: "Address",
         phoneNumbers: "Phone Numbers",
         german: "German:",
@@ -146,7 +132,6 @@ window.translations = {
         ctaSubtitle: "Book your perfect summer getaway today and enjoy the beautiful beaches, incredible sea views, and unforgettable memories in Vrasna.",
         bookNow: "Book Now",
         bookNowOnBooking: "Book Now on Booking.com",
-        bestPrice: "Best Price!",
         
         // Additional sections
         apartmentsTitle: "Our Apartments",
@@ -212,6 +197,8 @@ window.translations = {
         menu: "Menu",
         darkMode: "Dark Mode",
         languageSelector: "Language / Γλώσσα / Sprache / Език",
+        contactUs: "Contact Us",
+        followUs: "Follow Us",
     },
     el: {
         // Navigation
@@ -220,7 +207,6 @@ window.translations = {
         location: "Τοποθεσία", 
         sightseeing: "Αξιοθέατα",
         contact: "Επικοινωνία",
-        book: "Κράτηση Τώρα",
         bookNow: "Κράτηση Τώρα",
         
         // Hero Section
@@ -292,18 +278,6 @@ window.translations = {
         studioApartment6Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
         maxGuests: "Μέγιστοι 2 επισκέπτες",
         
-        // Why Choose Section
-        whyChooseTitle: "Γιατί να Επιλέξετε τα Maria Rooms;",
-        whyChooseSubtitle: "Ανακαλύψτε τι κάνει τα διαμερίσματα διακοπών μας την τέλεια επιλογή για τις ελληνικές σας διακοπές",
-        perfectLocationTitle: "Ιδανική Τοποθεσία",
-        perfectLocationDesc: "Μόλις 650μ από την όμορφη παραλία, 100μ από τον κύριο δρόμο για ήσυχο ύπνο, περιτριγυρισμένο από μικρό δάσος για φυσική ομορφιά.",
-        ultimateComfortTitle: "Απόλυτη Άνεση",
-        ultimateComfortDesc: "Πλήρως εξοπλισμένα στούντιο με κλιματισμό, επίπεδες τηλεοράσεις, ιδιωτικές βεράντες και όλα όσα χρειάζεστε για μια άνετη διαμονή.",
-        authenticExperienceTitle: "Αυθεντική Εμπειρία",
-        authenticExperienceDesc: "Βυθιστείτε στην τοπική κουλτούρα με ελληνική φιλοξενία, παραδοσιακή αρχιτεκτονική και αυθεντική ατμόσφαιρα χωριού.",
-        specialOfferTitle: "Ειδική Καλοκαιρινή Προσφορά",
-        specialOfferDesc: "Κλείστε τη διαμονή σας τώρα και απολαύστε τις τιμές περιορισμένης διαθεσιμότητάς μας. Ιδανικό για οικογένειες, ζευγάρια και μοναχικούς ταξιδιώτες!",
-        
         // Amenities Section
         amenities: "Ανέσεις & Χαρακτηριστικά",
         amenitiesSubtitle: "Όλα όσα χρειάζεστε για μια άνετη διαμονή",
@@ -361,8 +335,6 @@ window.translations = {
         contactTitle: "Επικοινωνήστε μαζί μας",
         contactSubtitle: "Είστε έτοιμοι να κλείσετε την τέλεια καλοκαιρινή διακοπή σας; Επικοινωνήστε μαζί μας για οποιεσδήποτε ερωτήσεις ή κρατήσεις.",
         sendMessage: "Αποστολή Μηνύματος",
-        messageSent: "Ευχαριστούμε! Το μήνυμά σας στάλθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.",
-        messageError: "Συγγνώμη, υπήρξε σφάλμα στην αποστολή του μηνύματός σας. Παρακαλώ δοκιμάστε ξανά ή επικοινωνήστε μαζί μας απευθείας.",
         address: "Διεύθυνση",
         phoneNumbers: "Τηλέφωνα",
         german: "Γερμανικά:",
@@ -392,7 +364,6 @@ window.translations = {
         ctaSubtitle: "Κλείστε τις ιδανικές σας καλοκαιρινές διακοπές σήμερα και απολαύστε τις όμορφες παραλίες, τις απίστευτες θέας στη θάλασσα και τις αξέχαστες αναμνήσεις στα Βρασνά.",
         bookNowOnBooking: "Κράτηση Τώρα στο Booking.com",
         contactUs: "Επικοινωνήστε μαζί μας",
-        bestPrice: "Καλύτερη Τιμή!",
         
         // Footer
         allRightsReserved: "Όλα τα δικαιώματα διατηρούνται.",
@@ -408,6 +379,8 @@ window.translations = {
         menu: "Menu",
         darkMode: "Dark Mode",
         languageSelector: "Language / Γλώσσα / Sprache / Език",
+        contactUs: "Επικοινωνήστε μαζί μας",
+        followUs: "Ακολουθήστε μας",
     },
     de: {
         // Navigation
@@ -416,7 +389,6 @@ window.translations = {
         location: "Standort",
         sightseeing: "Sehenswürdigkeiten", 
         contact: "Kontakt",
-        book: "Jetzt Buchen",
         bookNow: "Jetzt Buchen",
         
         // Hero Section
@@ -466,7 +438,6 @@ window.translations = {
         apartmentsTitleKey31: "Unsere Apartments",
         apartmentsTitleKey32: "Unsere Apartments",
         apartmentsTitleKey33: "Unsere Apartments",
-        apartmentsTitleKey34: "Unsere Apartments",
         apartmentsSubtitle: "Unser Hotel hat 6 Zimmer mit Rollläden, Moskitonetzen und Zelten, es ist 100m von der Hauptstraße entfernt, also geeignet für ruhigen Schlaf!",
         available: "Verfügbar",
         limitedAvailability: "Begrenzte Verfügbarkeit",
@@ -487,18 +458,6 @@ window.translations = {
         studioApartment6: "Studio 6 - Studio mit Balkon",
         studioApartment6Description: "23m² Studio mit Balkon und Gartenblick. Klimaanlage, Flachbildfernseher und voll ausgestattete Küche.",
         maxGuests: "Max. 2 Gäste",
-        
-        // Why Choose Section
-        whyChooseTitle: "Warum Maria Rooms wählen?",
-        whyChooseSubtitle: "Entdecken Sie, was unsere Ferienwohnungen zur perfekten Wahl für Ihren griechischen Urlaub macht",
-        perfectLocationTitle: "Perfekter Standort",
-        perfectLocationDesc: "Nur 650m vom schönen Strand entfernt, 100m vom Hauptweg für ruhigen Schlaf, umgeben von einem kleinen Wald für natürliche Schönheit.",
-        ultimateComfortTitle: "Ultimativer Komfort",
-        ultimateComfortDesc: "Voll ausgestattete Studios mit Klimaanlage, Flachbildfernsehern, privaten Balkonen und allem, was Sie für einen komfortablen Aufenthalt benötigen.",
-        authenticExperienceTitle: "Authentische Erfahrung",
-        authenticExperienceDesc: "Tauchen Sie ein in die lokale Kultur mit griechischer Gastfreundschaft, traditioneller Architektur und authentischer Dorfatmosphäre.",
-        specialOfferTitle: "Spezielle Sommerangebote",
-        specialOfferDesc: "Buchen Sie Ihren Aufenthalt jetzt und genießen Sie unsere begrenzten Verfügbarkeitsraten. Perfekt für Familien, Paare und Alleinreisende!",
         
         // Amenities Section
         amenities: "Annehmlichkeiten & Features",
@@ -557,8 +516,6 @@ window.translations = {
         contactTitle: "Kontaktieren Sie uns",
         contactSubtitle: "Bereit, Ihren perfekten Sommerurlaub zu buchen? Kontaktieren Sie uns für Fragen oder Reservierungen.",
         sendMessage: "Nachricht senden",
-        messageSent: "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns bald bei Ihnen melden.",
-        messageError: "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
         address: "Adresse",
         phoneNumbers: "Telefonnummern",
         german: "Deutsch:",
@@ -588,7 +545,6 @@ window.translations = {
         ctaSubtitle: "Buchen Sie heute Ihren perfekten Sommerurlaub und genießen Sie die schönen Strände, unglaubliche Meerblick und unvergessliche Erinnerungen in Vrasna.",
         bookNowOnBooking: "Jetzt auf Booking.com buchen",
         contactUs: "Kontaktieren Sie uns",
-        bestPrice: "Bester Preis!",
         
         // Footer
         allRightsReserved: "Alle Rechte vorbehalten.",
@@ -612,6 +568,8 @@ window.translations = {
         menu: "Menü",
         darkMode: "Dunkler Modus",
         languageSelector: "Sprache / Γλώσσα / Sprache / Език",
+        contactUs: "Kontaktieren Sie uns",
+        followUs: "Folgen Sie uns",
     },
     bg: {
         // Navigation
@@ -620,7 +578,6 @@ window.translations = {
         location: "Местоположение",
         sightseeing: "Забележителности",
         contact: "Контакти", 
-        book: "Резервирай Сега",
         bookNow: "Резервирай Сега",
         
         // Hero Section
@@ -670,7 +627,6 @@ window.translations = {
         apartmentsTitleKey31: "Нашите Апартаменти",
         apartmentsTitleKey32: "Нашите Апартаменти",
         apartmentsTitleKey33: "Нашите Апартаменти",
-        apartmentsTitleKey34: "Нашите Апартаменти",
         apartmentsSubtitle: "Хотелът ни има 6 стаи с щори, мрежи срещу комари и палатки, на 100м от главния път, така че е подходящ за тих сън!",
         available: "Наличен",
         limitedAvailability: "Ограничена Наличност",
@@ -691,18 +647,6 @@ window.translations = {
         studioApartment6: "Студио 6 - Студио с Балкон",
         studioApartment6Description: "Студио 23m² с балкон и изглед към градината. Климатик, плоскоекранен телевизор и напълно оборудвана кухня.",
         maxGuests: "Макс. 2 гости",
-        
-        // Why Choose Section
-        whyChooseTitle: "Защо да Изберете Maria Rooms?",
-        whyChooseSubtitle: "Открийте какво прави нашите апартаменти за почивка перфектния избор за вашата гръцка почивка",
-        perfectLocationTitle: "Перфектно Местоположение",
-        perfectLocationDesc: "Само 650м от красивата плажа, 100м от главния път за тих сън, заобиколен от малка гора за природна красота.",
-        ultimateComfortTitle: "Абсолютен Комфорт",
-        ultimateComfortDesc: "Напълно оборудвани студия с климатик, плоскоекранни телевизори, частни балкони и всичко необходимо за комфортен престой.",
-        authenticExperienceTitle: "Автентично Изживяване",
-        authenticExperienceDesc: "Потопете се в местната култура с гръцко гостоприемство, традиционна архитектура и автентична атмосфера на село.",
-        specialOfferTitle: "Специална Лятна Оферта",
-        specialOfferDesc: "Резервирайте престоя си сега и се насладете на нашите цени с ограничена наличност. Перфектно за семейства, двойки и самостоятелни пътници!",
         
         // Amenities Section
         amenities: "Удобства & Характеристики",
@@ -761,8 +705,6 @@ window.translations = {
         contactTitle: "Свържете се с нас",
         contactSubtitle: "Готови ли сте да резервирате перфектната си летна почивка? Свържете се с нас за въпроси или резервации.",
         sendMessage: "Изпрати съобщение",
-        messageSent: "Благодарим ви! Вашето съобщение беше изпратено успешно. Ще се свържем с вас скоро.",
-        messageError: "Съжаляваме, имаше грешка при изпращането на вашето съобщение. Моля, опитайте отново или се свържете с нас директно.",
         address: "Адрес",
         phoneNumbers: "Телефонни номера",
         german: "Немски:",
@@ -792,7 +734,6 @@ window.translations = {
         ctaSubtitle: "Резервирайте перфектната си лятна почивка днес и се насладете на красивите плажове, невероятните изгледи към морето и незабравимите спомени във Врасна.",
         bookNowOnBooking: "Резервирай сега в Booking.com",
         contactUs: "Свържете се с нас",
-        bestPrice: "Най-добра Цена!",
         
         // Footer
         allRightsReserved: "Всички права запазени.",
@@ -808,6 +749,8 @@ window.translations = {
         menu: "Menu",
         darkMode: "Dark Mode",
         languageSelector: "Language / Γλώσσα / Sprache / Език",
+        contactUs: "Свържете се с нас",
+        followUs: "Последвайте ни",
     }
 };
 
@@ -825,12 +768,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Elements found and initialized
 
     // Language switching functionality
-    let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    let currentLanguage = localStorage.getItem('preferredLanguage') || 'en';
     
     // Auto-detect user's language using best practices
     function detectUserLanguage() {
         // Check localStorage first (user preference)
-        const savedLang = localStorage.getItem('selectedLanguage');
+        const savedLang = localStorage.getItem('preferredLanguage');
         if (savedLang && translations[savedLang]) {
             return savedLang;
         }
@@ -863,7 +806,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!translations[lang]) return;
         
         currentLanguage = lang;
-        localStorage.setItem('selectedLanguage', lang);
+        localStorage.setItem('preferredLanguage', lang);
         
         // Update current language display with country letters
         if (currentLanguageElement) {
@@ -1101,19 +1044,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Close mobile menu
                 if (mobileMenu) {
                     mobileMenu.classList.add('hidden');
-                    // Remove class from body and html
-                    document.body.classList.remove('mobile-menu-open');
-                    document.documentElement.classList.remove('mobile-menu-open');
-                    // Restore body scrolling
-                    const scrollY = document.body.style.top;
-                    document.body.style.position = '';
-                    document.body.style.width = '';
-                    document.body.style.top = '';
-                    document.body.style.overflow = '';
-                    // Restore scroll position
-                    if (scrollY) {
-                        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-                    }
+                    document.body.style.overflow = 'auto';
                 }
             });
         });
@@ -1124,305 +1055,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile menu toggle
     if (mobileMenuButton && mobileMenu) {
-        console.log('✅ Mobile menu elements found, adding event listeners...');
         mobileMenuButton.addEventListener('click', function() {
-            console.log('🎯 Mobile menu button clicked!');
             // Mobile menu button clicked!
             mobileMenu.classList.remove('hidden');
-            console.log('📱 Hidden class removed from mobile menu');
-            // Add class to body and html for CSS control
-            document.body.classList.add('mobile-menu-open');
-            document.documentElement.classList.add('mobile-menu-open');
-            console.log('🔒 mobile-menu-open class added to body and html');
-            
-            // Store original scroll position and prevent body scrolling completely
-            const scrollY = window.scrollY;
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.left = '0';
-            document.body.style.right = '0';
             document.body.style.overflow = 'hidden';
-            console.log('🚫 Body scrolling prevented');
-            
-            // Prevent touch scrolling on mobile devices
-            const preventTouch = function(e) {
-                e.preventDefault();
-            };
-            
-            mobileMenu.addEventListener('touchmove', preventTouch, { passive: false });
-            
-            // Store references for cleanup
-            mobileMenu._scrollY = scrollY;
-            mobileMenu._preventTouch = preventTouch;
-            
-            // Ensure theme and language switchers are properly initialized
-            setTimeout(() => {
-                const savedDarkMode = localStorage.getItem('darkMode');
-                const isDark = savedDarkMode === 'true';
-                
-                if (isDark) {
-                    updateDarkModeIcons(true);
-                } else {
-                    updateDarkModeIcons(false);
-                }
-                
-                // Force update mobile menu theme when opening - DIRECT CSS INJECTION
-                setTimeout(() => {
-                    console.log('🎨 Applying direct CSS fix for mobile menu theme...');
-                    
-                    // Remove existing theme fix styles
-                    const existingStyle = document.getElementById('mobile-theme-fix');
-                    if (existingStyle) {
-                        existingStyle.remove();
-                    }
-                    
-                    // Create and inject CSS based on current theme
-                    const style = document.createElement('style');
-                    style.id = 'mobile-theme-fix';
-                    
-                    if (isDark) {
-                        style.innerHTML = `
-                            /* Dark theme fixes */
-                            #mobile-menu {
-                                background: rgba(31, 41, 55, 0.95) !important;
-                                background-color: rgba(31, 41, 55, 0.95) !important;
-                            }
-                            
-                            #mobile-menu nav a {
-                                color: rgb(255, 255, 255) !important;
-                                background-color: transparent !important;
-                            }
-                            
-                            .mobile-language-option {
-                                color: rgb(255, 255, 255) !important;
-                                background-color: rgba(255, 255, 255, 0.1) !important;
-                            }
-                            
-                            #mobile-dark-mode-toggle {
-                                color: rgb(209, 213, 219) !important;
-                                background-color: rgba(255, 255, 255, 0.1) !important;
-                            }
-                        `;
-                    } else {
-                        style.innerHTML = `
-                            /* ULTIMATE LIGHT THEME FIX */
-                            html:not(.dark) #mobile-menu,
-                            html:not(.dark) #mobile-menu.mobile-menu-overlay {
-                                background: rgba(255, 255, 255, 0.98) !important;
-                                background-color: rgba(255, 255, 255, 0.98) !important;
-                                color: rgb(17, 24, 39) !important;
-                            }
-                            
-                            html:not(.dark) #mobile-menu nav {
-                                background-color: rgba(255, 255, 255, 0.9) !important;
-                                padding: 8px !important;
-                                border-radius: 8px !important;
-                                margin-bottom: 8px !important;
-                                border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                            }
-                            
-                            html:not(.dark) #mobile-menu nav a,
-                            html:not(.dark) #mobile-menu nav a:hover,
-                            html:not(.dark) #mobile-menu nav a:focus {
-                                color: rgb(17, 24, 39) !important;
-                                background-color: rgba(255, 255, 255, 0.95) !important;
-                                border: 1px solid rgba(229, 231, 235, 0.8) !important;
-                                margin: 2px 0 !important;
-                                padding: 8px 12px !important;
-                                border-radius: 6px !important;
-                            }
-                            
-                            html:not(.dark) .mobile-language-option,
-                            html:not(.dark) button.mobile-language-option,
-                            html:not(.dark) #mobile-menu .mobile-language-option {
-                                color: rgb(17, 24, 39) !important;
-                                background-color: rgba(255, 255, 255, 0.98) !important;
-                                border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                            }
-                            
-                            html:not(.dark) #mobile-dark-mode-toggle {
-                                color: rgb(75, 85, 99) !important;
-                                background-color: rgba(255, 255, 255, 0.98) !important;
-                                border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                            }
-                        `;
-                    }
-                    
-                    document.head.appendChild(style);
-                    console.log(`✅ Direct CSS fix applied for ${isDark ? 'dark' : 'light'} mode`);
-                }, 100);
-                
-                // Re-attach mobile theme toggle event listener to ensure it works
-                const mobileDarkModeToggleInMenu = document.getElementById('mobile-dark-mode-toggle');
-                if (mobileDarkModeToggleInMenu) {
-                    // Remove existing listeners and add new one
-                    mobileDarkModeToggleInMenu.onclick = function() {
-                        console.log('🎨 Mobile dark mode toggle clicked via onclick!');
-                        toggleDarkMode();
-                        
-                        // Apply direct CSS fix after toggle
-                        setTimeout(() => {
-                            const isDarkAfterToggle = document.documentElement.classList.contains('dark');
-                            console.log(`🔄 Applying CSS fix after toggle - ${isDarkAfterToggle ? 'DARK' : 'LIGHT'} mode`);
-                            
-                            // Remove existing theme fix styles
-                            const existingStyle = document.getElementById('mobile-theme-fix');
-                            if (existingStyle) {
-                                existingStyle.remove();
-                            }
-                            
-                            // Create and inject CSS based on new theme
-                            const style = document.createElement('style');
-                            style.id = 'mobile-theme-fix';
-                            
-                            if (isDarkAfterToggle) {
-                                style.innerHTML = `
-                                    /* Dark theme fixes */
-                                    #mobile-menu {
-                                        background: rgba(31, 41, 55, 0.95) !important;
-                                        background-color: rgba(31, 41, 55, 0.95) !important;
-                                    }
-                                    
-                                    #mobile-menu nav a {
-                                        color: rgb(255, 255, 255) !important;
-                                        background-color: transparent !important;
-                                    }
-                                    
-                                    .mobile-language-option {
-                                        color: rgb(255, 255, 255) !important;
-                                        background-color: rgba(255, 255, 255, 0.1) !important;
-                                    }
-                                    
-                                    #mobile-dark-mode-toggle {
-                                        color: rgb(209, 213, 219) !important;
-                                        background-color: rgba(255, 255, 255, 0.1) !important;
-                                    }
-                                `;
-                            } else {
-                                style.innerHTML = `
-                                    /* ULTIMATE LIGHT THEME FIX */
-                                    html:not(.dark) #mobile-menu,
-                                    html:not(.dark) #mobile-menu.mobile-menu-overlay {
-                                        background: rgba(255, 255, 255, 0.98) !important;
-                                        background-color: rgba(255, 255, 255, 0.98) !important;
-                                        color: rgb(17, 24, 39) !important;
-                                    }
-                                    
-                                    html:not(.dark) #mobile-menu nav {
-                                        background-color: rgba(255, 255, 255, 0.9) !important;
-                                        padding: 8px !important;
-                                        border-radius: 8px !important;
-                                        margin-bottom: 8px !important;
-                                        border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                                    }
-                                    
-                                    html:not(.dark) #mobile-menu nav a,
-                                    html:not(.dark) #mobile-menu nav a:hover,
-                                    html:not(.dark) #mobile-menu nav a:focus {
-                                        color: rgb(17, 24, 39) !important;
-                                        background-color: rgba(255, 255, 255, 0.95) !important;
-                                        border: 1px solid rgba(229, 231, 235, 0.8) !important;
-                                        margin: 2px 0 !important;
-                                        padding: 8px 12px !important;
-                                        border-radius: 6px !important;
-                                    }
-                                    
-                                    html:not(.dark) .mobile-language-option,
-                                    html:not(.dark) button.mobile-language-option,
-                                    html:not(.dark) #mobile-menu .mobile-language-option {
-                                        color: rgb(17, 24, 39) !important;
-                                        background-color: rgba(255, 255, 255, 0.98) !important;
-                                        border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                                    }
-                                    
-                                    html:not(.dark) #mobile-dark-mode-toggle {
-                                        color: rgb(75, 85, 99) !important;
-                                        background-color: rgba(255, 255, 255, 0.98) !important;
-                                        border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                                    }
-                                `;
-                            }
-                            
-                            document.head.appendChild(style);
-                            console.log(`✅ Direct CSS fix applied after toggle for ${isDarkAfterToggle ? 'dark' : 'light'} mode`);
-                        }, 100);
-                    };
-                    console.log('✅ Mobile theme toggle event listener re-attached');
-                }
-            }, 100);
         });
-    } else {
-        console.log('❌ Mobile menu elements not found:', {
-            mobileMenuButton: !!mobileMenuButton,
-            mobileMenu: !!mobileMenu
-        });
-    }
-
-    // Function to close mobile menu and restore scroll
-    function closeMobileMenu() {
-        if (!mobileMenu || mobileMenu.classList.contains('hidden')) return;
-        
-        console.log('🔓 Closing mobile menu...');
-        mobileMenu.classList.add('hidden');
-        console.log('📱 Hidden class added to mobile menu');
-        
-        // Remove class from body and html
-        document.body.classList.remove('mobile-menu-open');
-        document.documentElement.classList.remove('mobile-menu-open');
-        console.log('🔓 mobile-menu-open class removed from body and html');
-        
-        // Restore body styles and scroll position
-        const scrollY = mobileMenu._scrollY || 0;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.left = '';
-        document.body.style.right = '';
-        document.body.style.overflow = '';
-        console.log('✅ Body scrolling restored');
-        
-        // Remove touch event listener
-        if (mobileMenu._preventTouch) {
-            mobileMenu.removeEventListener('touchmove', mobileMenu._preventTouch);
-        }
-        
-        // Restore scroll position
-        window.scrollTo(0, scrollY);
-        console.log('📍 Scroll position restored to:', scrollY);
-        
-        // Clear stored references
-        delete mobileMenu._scrollY;
-        delete mobileMenu._preventTouch;
     }
 
     if (mobileMenuClose && mobileMenu) {
-        console.log('✅ Mobile menu close button found, adding event listener...');
         mobileMenuClose.addEventListener('click', function() {
-            console.log('🎯 Mobile menu close button clicked!');
-            closeMobileMenu();
-        });
-    } else {
-        console.log('❌ Mobile menu close button not found:', {
-            mobileMenuClose: !!mobileMenuClose,
-            mobileMenu: !!mobileMenu
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
         });
     }
 
-    // Close mobile menu when clicking on navigation links
-    const mobileNavLinks = document.querySelectorAll('#mobile-menu nav a');
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                closeMobileMenu();
-            }
-        });
-    });
-
-    // Close mobile menu when pressing Escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            closeMobileMenu();
-        }
-    });
+    // Close mobile menu when clicking outside (not needed for full-screen overlay)
+    // Full-screen overlay doesn't need click-outside functionality
 
     // Dark mode toggle
     if (darkModeToggle) {
@@ -1450,231 +1098,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Mobile dark mode toggle clicked!
             toggleDarkMode();
         });
-        
-        // Ensure mobile dark mode toggle gets the correct icon on initialization
-        const savedDarkMode = localStorage.getItem('darkMode');
-        if (savedDarkMode === 'true') {
-            updateDarkModeIcons(true);
-        } else {
-            updateDarkModeIcons(false);
-        }
     }
 
-    // Function to toggle dark mode with enhanced mobile menu support
+    // Function to toggle dark mode
     function toggleDarkMode() {
         document.documentElement.classList.toggle('dark');
         const isDark = document.documentElement.classList.contains('dark');
         // Dark mode toggled
         localStorage.setItem('darkMode', isDark);
         updateDarkModeIcons(isDark);
-        
-        // Enhanced mobile menu theme updating - force immediate update
-        setTimeout(() => {
-            forceUpdateMobileMenuTheme(isDark);
-        }, 50);
     }
-    
-    // Enhanced function to force update mobile menu theme using CSS injection
-    window.forceUpdateMobileMenuTheme = function(isDark) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (!mobileMenu || mobileMenu.classList.contains('hidden')) {
-            return; // Menu not open, no need to update
-        }
-        
-        console.log(`🎨 Force updating mobile menu theme: ${isDark ? 'DARK' : 'LIGHT'} mode`);
-        
-        // Remove existing theme fix styles
-        const existingStyle = document.getElementById('mobile-theme-fix');
-        if (existingStyle) {
-            existingStyle.remove();
-        }
-        
-        // Create and inject CSS based on theme
-        const style = document.createElement('style');
-        style.id = 'mobile-theme-fix';
-        
-        if (isDark) {
-            style.innerHTML = `
-                /* Dark theme fixes */
-                #mobile-menu {
-                    background: rgba(31, 41, 55, 0.95) !important;
-                    background-color: rgba(31, 41, 55, 0.95) !important;
-                }
-                
-                #mobile-menu nav a {
-                    color: rgb(255, 255, 255) !important;
-                    background-color: transparent !important;
-                }
-                
-                .mobile-language-option {
-                    color: rgb(255, 255, 255) !important;
-                    background-color: rgba(255, 255, 255, 0.1) !important;
-                }
-                
-                #mobile-dark-mode-toggle {
-                    color: rgb(209, 213, 219) !important;
-                    background-color: rgba(255, 255, 255, 0.1) !important;
-                }
-                
-                [data-translate="darkMode"],
-                [data-translate="languageSelector"] {
-                    color: rgb(209, 213, 219) !important;
-                }
-                
-                #mobile-menu a[href^="tel:"] span,
-                #mobile-menu a[href*="maps.google.com"] span {
-                    color: rgb(209, 213, 219) !important;
-                }
-                
-                #mobile-menu .flex.items-center.justify-center.space-x-3 a {
-                    color: rgb(209, 213, 219) !important;
-                    background-color: rgba(255, 255, 255, 0.1) !important;
-                }
-            `;
-        } else {
-            style.innerHTML = `
-                /* ULTIMATE LIGHT THEME FIX - Maximum Specificity */
-                
-                /* Mobile menu overlay */
-                html:not(.dark) #mobile-menu,
-                html:not(.dark) #mobile-menu.mobile-menu-overlay {
-                    background: rgba(255, 255, 255, 0.98) !important;
-                    background-color: rgba(255, 255, 255, 0.98) !important;
-                    color: rgb(17, 24, 39) !important;
-                }
-                
-                /* Navigation container */
-                html:not(.dark) #mobile-menu nav,
-                html:not(.dark) #mobile-menu .text-center.space-y-1.mb-3 {
-                    background-color: rgba(255, 255, 255, 0.9) !important;
-                    padding: 8px !important;
-                    border-radius: 8px !important;
-                    margin-bottom: 8px !important;
-                    border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                }
-                
-                /* Navigation links - FORCE white backgrounds */
-                html:not(.dark) #mobile-menu nav a,
-                html:not(.dark) #mobile-menu nav a:hover,
-                html:not(.dark) #mobile-menu nav a:focus,
-                html:not(.dark) #mobile-menu nav a:active {
-                    color: rgb(17, 24, 39) !important;
-                    background-color: rgba(255, 255, 255, 0.95) !important;
-                    border: 1px solid rgba(229, 231, 235, 0.8) !important;
-                    margin: 2px 0 !important;
-                    padding: 8px 12px !important;
-                    border-radius: 6px !important;
-                }
-                
-                /* Theme and language section containers */
-                html:not(.dark) #mobile-menu .text-center.space-y-3.mb-4,
-                html:not(.dark) #mobile-menu .flex.flex-col.items-center.justify-center.space-y-1,
-                html:not(.dark) #mobile-menu .flex.flex-col.items-center.space-y-1 {
-                    background-color: rgba(255, 255, 255, 0.9) !important;
-                    padding: 12px !important;
-                    border-radius: 8px !important;
-                    margin-bottom: 8px !important;
-                    border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                }
-                
-                /* Language buttons - FORCE white backgrounds with multiple selectors */
-                html:not(.dark) .mobile-language-option,
-                html:not(.dark) button.mobile-language-option,
-                html:not(.dark) #mobile-menu .mobile-language-option,
-                html:not(.dark) #mobile-menu button.mobile-language-option,
-                html:not(.dark) .mobile-language-option:hover,
-                html:not(.dark) .mobile-language-option:focus,
-                html:not(.dark) .mobile-language-option:active {
-                    color: rgb(17, 24, 39) !important;
-                    background-color: rgba(255, 255, 255, 0.98) !important;
-                    border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                    margin: 0 2px !important;
-                }
-                
-                /* Language buttons container */
-                html:not(.dark) #mobile-menu .flex.items-center.space-x-0\\.5,
-                html:not(.dark) #mobile-menu .flex.items-center.space-x-0\\.5.relative.z-20 {
-                    background-color: rgba(255, 255, 255, 0.8) !important;
-                    padding: 6px !important;
-                    border-radius: 6px !important;
-                    border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                }
-                
-                /* Theme toggle - FORCE white background */
-                html:not(.dark) #mobile-dark-mode-toggle,
-                html:not(.dark) #mobile-dark-mode-toggle:hover,
-                html:not(.dark) #mobile-dark-mode-toggle:focus,
-                html:not(.dark) #mobile-dark-mode-toggle:active {
-                    color: rgb(75, 85, 99) !important;
-                    background-color: rgba(255, 255, 255, 0.98) !important;
-                    border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                }
-                
-                /* Labels */
-                html:not(.dark) #mobile-menu [data-translate="darkMode"],
-                html:not(.dark) #mobile-menu [data-translate="languageSelector"],
-                html:not(.dark) #mobile-menu .text-xs.font-medium {
-                    color: rgb(75, 85, 99) !important;
-                    background-color: transparent !important;
-                }
-                
-                /* Contact section */
-                html:not(.dark) #mobile-menu .w-full.max-w-xs.mx-auto.px-2.relative.z-20.mt-4 {
-                    background-color: rgba(255, 255, 255, 0.9) !important;
-                    padding: 12px !important;
-                    border-radius: 8px !important;
-                    border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                }
-                
-                /* Contact links - FORCE white backgrounds */
-                html:not(.dark) #mobile-menu a[href^="tel:"],
-                html:not(.dark) #mobile-menu a[href*="maps.google.com"],
-                html:not(.dark) #mobile-menu a[href^="tel:"]:hover,
-                html:not(.dark) #mobile-menu a[href*="maps.google.com"]:hover {
-                    background-color: rgba(255, 255, 255, 0.95) !important;
-                    border: 1px solid rgba(229, 231, 235, 0.8) !important;
-                    border-radius: 6px !important;
-                    margin-bottom: 4px !important;
-                    color: rgb(75, 85, 99) !important;
-                }
-                
-                /* Contact link text */
-                html:not(.dark) #mobile-menu a[href^="tel:"] span,
-                html:not(.dark) #mobile-menu a[href*="maps.google.com"] span {
-                    color: rgb(75, 85, 99) !important;
-                    background-color: transparent !important;
-                }
-                
-                /* Social media section */
-                html:not(.dark) #mobile-menu .flex.items-center.justify-center.space-x-3 {
-                    background-color: rgba(255, 255, 255, 0.9) !important;
-                    padding: 8px !important;
-                    border-radius: 8px !important;
-                    border: 1px solid rgba(229, 231, 235, 0.6) !important;
-                }
-                
-                /* Social media links - FORCE white backgrounds */
-                html:not(.dark) #mobile-menu .flex.items-center.justify-center.space-x-3 a,
-                html:not(.dark) #mobile-menu .flex.items-center.justify-center.space-x-3 a:hover,
-                html:not(.dark) #mobile-menu .flex.items-center.justify-center.space-x-3 a:focus {
-                    color: rgb(75, 85, 99) !important;
-                    background-color: rgba(255, 255, 255, 0.98) !important;
-                    border: 1px solid rgba(229, 231, 235, 0.9) !important;
-                }
-                
-                /* Close button */
-                html:not(.dark) #mobile-menu-close,
-                html:not(.dark) #mobile-menu-close:hover {
-                    color: rgb(17, 24, 39) !important;
-                    background-color: rgba(255, 255, 255, 0.9) !important;
-                    border-color: rgba(17, 24, 39, 0.2) !important;
-                }
-            `;
-        }
-        
-        document.head.appendChild(style);
-        console.log(`✅ CSS-based theme fix applied for ${isDark ? 'dark' : 'light'} mode`);
-    };
 
     // Function to update dark mode icons
     function updateDarkModeIcons(isDark) {
@@ -1698,69 +1131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Navigation highlighting system
-    const navigationLinks = document.querySelectorAll('nav a[href^="#"]');
-    const sections = document.querySelectorAll('section[id]');
-    
-    // Function to update active navigation link
-    function updateActiveNavigation() {
-        const scrollPosition = window.scrollY + 100; // Offset for better detection
-        let currentSection = '';
-        
-        // Find which section is currently in view
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSection = sectionId;
-            }
-        });
-        
-        // If we're at the very top, consider it "home"
-        if (scrollPosition < 200) {
-            currentSection = 'home';
-        }
-        
-        // Remove active classes from all navigation links (both desktop and mobile)
-        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-            // Desktop navigation styling
-            link.classList.remove('text-primary', 'bg-primary/10', 'border-b-2', 'border-primary');
-            link.classList.add('text-gray-700', 'hover:text-primary');
-            
-            // Dark mode classes
-            link.classList.remove('dark:text-primary');
-            link.classList.add('dark:text-gray-200', 'dark:hover:text-primary');
-        });
-        
-        // Mobile navigation links
-        document.querySelectorAll('#mobile-menu nav a[href^="#"]').forEach(link => {
-            link.classList.remove('text-primary', 'bg-primary/10');
-            link.classList.add('text-gray-900', 'hover:text-primary');
-            link.classList.remove('dark:text-primary');
-            link.classList.add('dark:text-white', 'dark:hover:text-primary');
-        });
-        
-        // Add active class to current section's navigation link
-        if (currentSection) {
-            // Desktop navigation
-            const activeDesktopLink = document.querySelector(`nav a[href="#${currentSection}"]:not(#mobile-menu a)`);
-            if (activeDesktopLink) {
-                activeDesktopLink.classList.remove('text-gray-700', 'hover:text-primary', 'dark:text-gray-200', 'dark:hover:text-primary');
-                activeDesktopLink.classList.add('text-primary', 'bg-primary/10', 'border-b-2', 'border-primary', 'dark:text-primary');
-            }
-            
-            // Mobile navigation
-            const activeMobileLink = document.querySelector(`#mobile-menu nav a[href="#${currentSection}"]`);
-            if (activeMobileLink) {
-                activeMobileLink.classList.remove('text-gray-900', 'hover:text-primary', 'dark:text-white', 'dark:hover:text-primary');
-                activeMobileLink.classList.add('text-primary', 'bg-primary/10', 'dark:text-primary');
-            }
-        }
-    }
-    
-    // Smooth scrolling for anchor links (only internal links starting with #)
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -1771,11 +1142,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     block: 'start'
                 });
                 
-                // Update active navigation immediately on click
-                setTimeout(() => {
-                    updateActiveNavigation();
-                }, 300);
-                
                 // Close mobile menu if open
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
@@ -1783,74 +1149,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    });
-    
-    // Update active navigation on scroll with throttling
-    let scrollTimeout;
-    window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(updateActiveNavigation, 50);
-    });
-    
-    // Update active navigation on page load and DOM ready
-    window.addEventListener('load', () => {
-        setTimeout(updateActiveNavigation, 100);
-    });
-    
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', updateActiveNavigation);
-    } else {
-        updateActiveNavigation();
-    }
-    
-    // Ensure external links (like Google Maps) work properly
-    document.querySelectorAll('a[href^="http"], a[href^="https"]').forEach(link => {
-        link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            console.log('External link clicked:', href);
-            
-            // Allow external links to work normally
-            if (href.includes('maps.app.goo.gl')) {
-                console.log('Google Maps link clicked - opening in new tab');
-                // Google Maps links should open normally
-                window.open(href, '_blank');
-                return true;
-            }
-            
-            // For other external links, let them work normally
-            return true;
-        });
-    });
-    
-    // Special handling for Google Maps buttons
-    document.querySelectorAll('a[href*="maps.app.goo.gl"]').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            console.log('Google Maps button clicked:', href);
-            
-            // Open Google Maps in new tab
-            window.open(href, '_blank');
-        });
-    });
-    
-    // Enhance address text functionality
-    document.querySelectorAll('[data-translate="addressText"]').forEach(addressText => {
-        // Make sure the address text is selectable
-        addressText.style.userSelect = 'text';
-        addressText.style.webkitUserSelect = 'text';
-        addressText.style.mozUserSelect = 'text';
-        addressText.style.msUserSelect = 'text';
-        
-        // Add click functionality if it's not already a link
-        if (!addressText.closest('a')) {
-            addressText.style.cursor = 'pointer';
-            addressText.addEventListener('click', function() {
-                const googleMapsUrl = 'https://maps.app.goo.gl/VM3AmiN77KfuV62G8';
-                console.log('Address text clicked - opening Google Maps:', googleMapsUrl);
-                window.open(googleMapsUrl, '_blank');
-            });
-        }
     });
 
     // Intersection Observer for animations
@@ -1883,8 +1181,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation and Formspree integration
-    const contactForm = document.querySelector('#contact-form');
+    // Form validation
+    const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1904,61 +1202,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Show loading state
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Sending...';
-            submitButton.disabled = true;
-            
-            // Submit to Formspree
-            const formData = new FormData(contactForm);
-            
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Success
-                    hideMessages();
-                    document.getElementById('success-message').classList.remove('hidden');
-                    contactForm.reset();
-                    showNotification('Message sent successfully!', 'success');
-                } else {
-                    // Error
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                // Error
-                hideMessages();
-                document.getElementById('error-message').classList.remove('hidden');
-                showNotification('Failed to send message. Please try again.', 'error');
-            })
-            .finally(() => {
-                // Reset button
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
-            });
+            // Simulate form submission
+            showNotification('Thank you! Your message has been sent successfully.', 'success');
+            contactForm.reset();
         });
-    }
-    
-    // Helper function to hide all messages
-    function hideMessages() {
-        document.getElementById('success-message').classList.add('hidden');
-        document.getElementById('error-message').classList.add('hidden');
-    }
-    
-    // Check for success parameter in URL (for Formspree redirect)
-    if (window.location.search.includes('success=true')) {
-        hideMessages();
-        document.getElementById('success-message').classList.remove('hidden');
-        // Remove the success parameter from URL
-        const newUrl = window.location.pathname;
-        window.history.replaceState({}, document.title, newUrl);
     }
 
     // Header scroll effect removed - navigation stays visible
@@ -1971,71 +1218,28 @@ function openImageModal(src, alt) {
     modal.innerHTML = `
         <div class="relative max-w-4xl max-h-full mx-4">
             <img src="${src}" alt="${alt}" class="w-full h-auto max-h-screen object-contain rounded-lg">
-            <button class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl font-bold" onclick="closeImageModal(this.parentElement.parentElement)">&times;</button>
+            <button class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl font-bold" onclick="this.parentElement.parentElement.remove()">&times;</button>
         </div>
     `;
     
-    // Store original scroll position and body overflow
-    const scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.overflow = 'hidden';
-    
-    // Prevent touch scrolling on mobile devices
-    const preventTouch = function(e) {
-        e.preventDefault();
-    };
-    
-    modal.addEventListener('touchmove', preventTouch, { passive: false });
-    
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
-            closeImageModal(modal);
+            modal.remove();
         }
     });
     
     document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
     
     // Close modal on escape key
     const handleEscape = function(e) {
         if (e.key === 'Escape') {
-            closeImageModal(modal);
+            modal.remove();
+            document.body.style.overflow = 'auto';
+            document.removeEventListener('keydown', handleEscape);
         }
     };
     document.addEventListener('keydown', handleEscape);
-    
-    // Store references for cleanup
-    modal._scrollY = scrollY;
-    modal._handleEscape = handleEscape;
-    modal._preventTouch = preventTouch;
-}
-
-function closeImageModal(modal) {
-    if (!modal || !modal.parentNode) return;
-    
-    // Restore body styles and scroll position
-    const scrollY = modal._scrollY || 0;
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.overflow = '';
-    
-    // Remove event listeners
-    if (modal._handleEscape) {
-        document.removeEventListener('keydown', modal._handleEscape);
-    }
-    if (modal._preventTouch) {
-        modal.removeEventListener('touchmove', modal._preventTouch);
-    }
-    
-    // Remove modal
-    modal.remove();
-    
-    // Restore scroll position
-    window.scrollTo(0, scrollY);
 }
 
 // Notification system
@@ -2308,7 +1512,7 @@ class HeroCarousel {
     }
 }
 
-        // Initialize carousel when DOM is loaded
+// Initialize carousel when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new HeroCarousel();
     
@@ -2334,39 +1538,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            effect: 'slide', // Changed from fade to slide for better mobile compatibility
-            speed: 600, // Faster transition for better mobile experience
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1000, // Slightly slower for smoother transitions
             grabCursor: true,
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,
-            },
-            // Enhanced mobile touch settings
-            touchRatio: 1,
-            touchAngle: 45,
-            simulateTouch: true,
-            allowTouchMove: true,
-            touchStartPreventDefault: false,
-            touchStartForcePreventDefault: false,
-            touchMoveStopPropagation: false,
-            // Responsive breakpoints
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    pagination: {
-                        dynamicBullets: false,
-                        dynamicMainBullets: 3,
-                    },
-                },
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    pagination: {
-                        dynamicBullets: true,
-                        dynamicMainBullets: 5,
-                    },
-                },
             },
             a11y: {
                 prevSlideMessage: 'Previous slide',
@@ -2374,105 +1554,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 firstSlideMessage: 'This is the first slide',
                 lastSlideMessage: 'This is the last slide',
             },
-            // Enhanced mobile behavior and image visibility
+            // Enhanced auto-play behavior
             on: {
                 init: function() {
-                    // Swiper initialized with auto-play
-                    // Ensure carousel is properly sized on mobile
-                    this.update();
-                    
-                    // Force visibility of first slide on mobile
-                    const firstSlide = this.slides[this.activeIndex];
-                    if (firstSlide) {
-                        const img = firstSlide.querySelector('img');
-                        if (img) {
-                            img.style.display = 'block';
-                            img.style.visibility = 'visible';
-                            img.style.opacity = '1';
-                            // Ensure image loads
-                            if (!img.complete) {
-                                img.onload = () => {
-                                    img.style.display = 'block';
-                                    img.style.visibility = 'visible';
-                                    img.style.opacity = '1';
-                                };
-                            }
-                        }
-                    }
+                    console.log('Swiper initialized with auto-play');
                 },
                 slideChange: function() {
-                    // Ensure current slide image is visible - critical for mobile
-                    const currentSlide = this.slides[this.activeIndex];
-                    if (currentSlide) {
-                        const img = currentSlide.querySelector('img');
-                        if (img) {
-                            img.style.display = 'block';
-                            img.style.visibility = 'visible';
-                            img.style.opacity = '1';
-                            img.style.transform = 'none'; // Remove any transforms that might hide the image
-                        }
-                    }
-                },
-                resize: function() {
-                    // Update carousel on window resize
-                    this.update();
-                    // Re-ensure visibility after resize
-                    const currentSlide = this.slides[this.activeIndex];
-                    if (currentSlide) {
-                        const img = currentSlide.querySelector('img');
-                        if (img) {
-                            img.style.display = 'block';
-                            img.style.visibility = 'visible';
-                            img.style.opacity = '1';
-                        }
-                    }
+                    console.log('Slide changed to:', this.realIndex);
                 }
             }
         });
         
-        // Thumbnail carousel
-        const thumbnailSwiper = new Swiper('.thumbnail-swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 8,
-            freeMode: true,
-            watchSlidesProgress: true,
-            grabCursor: true,
-            touchRatio: 1,
-            allowTouchMove: true,
-            breakpoints: {
-                320: {
-                    slidesPerView: 4,
-                    spaceBetween: 6,
-                },
-                480: {
-                    slidesPerView: 5,
-                    spaceBetween: 8,
-                },
-                640: {
-                    slidesPerView: 6,
-                    spaceBetween: 8,
-                },
-                768: {
-                    slidesPerView: 7,
-                    spaceBetween: 10,
-                },
-                1024: {
-                    slidesPerView: 8,
-                    spaceBetween: 12,
-                }
-            }
-        });
-        
-        // Sync main carousel with thumbnails
-        heroSwiper.on('slideChange', function () {
-            thumbnailSwiper.slideTo(heroSwiper.realIndex);
-        });
-        
-        // Click on thumbnail to go to main slide
-        document.querySelectorAll('.thumbnail-swiper .swiper-slide').forEach((slide, index) => {
-            slide.addEventListener('click', () => {
-                heroSwiper.slideTo(index);
-            });
-        });
+
     }
 });
