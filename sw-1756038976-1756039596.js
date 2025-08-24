@@ -1,5 +1,5 @@
-// Service Worker for Maria Rooms - DARK MODE THUMBNAIL FIX - FORCE CACHE CLEAR
-const CACHE_NAME = 'maria-rooms-dark-thumbnails-v6-' + Date.now();
+// Service Worker for Maria Rooms - AGGRESSIVE CACHE CLEARING
+const CACHE_NAME = 'maria-rooms-production-' + Date.now();
 const OLD_CACHES = [
     'maria-rooms-v2-dev',
     'maria-rooms-v3-prod',
@@ -44,18 +44,20 @@ const currentPort = self.location.port;
 
 // Skip waiting to activate immediately
 self.addEventListener('install', event => {
-  console.log('Service Worker installing with aggressive cache clearing...');
+  console.log('Service Worker installing with AGGRESSIVE cache clearing...');
   self.skipWaiting(); // Force activation
   event.waitUntil(
     Promise.all([
-      // Clear all old caches first
-      ...OLD_CACHES.map(cacheName => 
-        caches.delete(cacheName).then(deleted => {
-          if (deleted) {
-            console.log('Deleted old cache:', cacheName);
-          }
-        })
-      ),
+      // Clear ALL caches first (nuclear option)
+      caches.keys().then(cacheNames => {
+        console.log('Clearing ALL existing caches:', cacheNames);
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            console.log('Deleting cache:', cacheName);
+            return caches.delete(cacheName);
+          })
+        );
+      }),
       // Clear any cache that starts with our app name
       caches.keys().then(cacheNames => {
         return Promise.all(
@@ -76,6 +78,28 @@ self.addEventListener('install', event => {
         .catch(error => {
           console.error('Cache installation failed:', error);
         })
+    ])
+  );
+});
+
+// Force unregister old service workers
+self.addEventListener('activate', event => {
+  console.log('Service Worker activating - clearing all old caches...');
+  event.waitUntil(
+    Promise.all([
+      // Clear all caches
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            if (cacheName !== CACHE_NAME) {
+              console.log('Deleting old cache on activate:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      }),
+      // Take control of all clients immediately
+      self.clients.claim()
     ])
   );
 });
