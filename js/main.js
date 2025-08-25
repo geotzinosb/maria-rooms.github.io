@@ -1,5 +1,7 @@
 // Mobile menu functionality
 // Maria Rooms JavaScript loaded!
+console.log('=== MAIN.JS LOADED ===');
+console.log('Language switcher functionality should be available');
 
 // Language translations
 window.translations = {
@@ -1610,55 +1612,338 @@ class HeroCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new HeroCarousel();
     
-    // Initialize Swiper Carousel
-    if (typeof Swiper !== 'undefined') {
-        // Main hero carousel
-        const heroSwiper = new Swiper('.hero-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            autoplay: {
-                delay: 4000, // 4 seconds between slides
-                disableOnInteraction: false, // Continues auto-play after user interaction
-                pauseOnMouseEnter: true, // Pauses on hover
-                waitForTransition: true, // Waits for transition to complete
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true, // Dynamic pagination bullets
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-            speed: 1000, // Slightly slower for smoother transitions
-            grabCursor: true,
-            keyboard: {
-                enabled: true,
-                onlyInViewport: true,
-            },
-            a11y: {
-                prevSlideMessage: 'Previous slide',
-                nextSlideMessage: 'Next slide',
-                firstSlideMessage: 'This is the first slide',
-                lastSlideMessage: 'This is the last slide',
-            },
-            // Enhanced auto-play behavior
-            on: {
-                init: function() {
-                    console.log('Swiper initialized with auto-play');
+            // Initialize Swiper Carousel
+        if (typeof Swiper !== 'undefined') {
+            // Main hero carousel
+            const heroSwiper = new Swiper('.hero-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                autoplay: {
+                    delay: 4000, // 4 seconds between slides
+                    disableOnInteraction: false, // Continues auto-play after user interaction
+                    pauseOnMouseEnter: true, // Pauses on hover
+                    waitForTransition: true, // Waits for transition to complete
                 },
-                slideChange: function() {
-                    console.log('Slide changed to:', this.realIndex);
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true, // Dynamic pagination bullets
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1000, // Slightly slower for smoother transitions
+                grabCursor: true,
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
+                a11y: {
+                    prevSlideMessage: 'Previous slide',
+                    nextSlideMessage: 'Next slide',
+                    firstSlideMessage: 'This is the first slide',
+                    lastSlideMessage: 'This is the last slide',
+                },
+                // Enhanced auto-play behavior
+                on: {
+                    init: function() {
+                        console.log('Swiper initialized with auto-play');
+                        // Force image visibility on mobile devices
+                        forceCarouselImageVisibility();
+                    },
+                    slideChange: function() {
+                        console.log('Slide changed to:', this.realIndex);
+                        // Ensure images are visible after slide change
+                        setTimeout(forceCarouselImageVisibility, 100);
+                    },
+                    imagesReady: function() {
+                        console.log('All carousel images are ready');
+                        forceCarouselImageVisibility();
+                    }
                 }
+            });
+            
+            // Function to force carousel image visibility on mobile devices
+            function forceCarouselImageVisibility() {
+                const isMobile = window.innerWidth <= 926;
+                if (isMobile) {
+                    const carouselImages = document.querySelectorAll('.hero-swiper .swiper-slide img, .swiper.hero-swiper .swiper-slide img');
+                    carouselImages.forEach(img => {
+                        // Force image display properties
+                        img.style.setProperty('display', 'block', 'important');
+                        img.style.setProperty('visibility', 'visible', 'important');
+                        img.style.setProperty('opacity', '1', 'important');
+                        img.style.setProperty('width', '100%', 'important');
+                        img.style.setProperty('height', '100%', 'important');
+                        img.style.setProperty('object-fit', 'cover', 'important');
+                        img.style.setProperty('z-index', '10', 'important');
+                        img.style.setProperty('position', 'relative', 'important');
+                        
+                        // Ensure image is loaded
+                        if (img.complete && img.naturalHeight !== 0) {
+                            console.log('Image loaded successfully:', img.src);
+                        } else {
+                            // Force reload if image failed to load
+                            const originalSrc = img.src;
+                            img.src = '';
+                            img.src = originalSrc + '?t=' + Date.now();
+                            console.log('Forcing image reload:', img.src);
+                        }
+                    });
+                    
+                    console.log(`Forced visibility for ${carouselImages.length} carousel images on mobile`);
+                }
+            }
+            
+            // Call the function immediately and on window resize
+            forceCarouselImageVisibility();
+            window.addEventListener('resize', forceCarouselImageVisibility);
+            
+            // Monitor for any image loading issues
+            const carouselImages = document.querySelectorAll('.hero-swiper .swiper-slide img, .swiper.hero-swiper .swiper-slide img');
+            carouselImages.forEach(img => {
+                img.addEventListener('load', function() {
+                    console.log('Carousel image loaded successfully:', this.src);
+                    if (window.innerWidth <= 926) {
+                        forceCarouselImageVisibility();
+                    }
+                });
+                
+                img.addEventListener('error', function() {
+                    console.error('Carousel image failed to load:', this.src);
+                    // Try to reload the image
+                    const originalSrc = this.src;
+                    this.src = '';
+                    this.src = originalSrc + '?t=' + Date.now();
+                });
+            });
+        }
+});
+
+// Language Switcher Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language switcher
+    initializeLanguageSwitcher();
+});
+
+function initializeLanguageSwitcher() {
+    console.log('Initializing language switcher...');
+    
+    // Get current language from URL or localStorage
+    const currentLang = getCurrentLanguage();
+    console.log('Current language:', currentLang);
+    
+    // Update UI to reflect current language
+    updateLanguageUI(currentLang);
+    
+    // Desktop language switcher
+    const languageToggle = document.getElementById('language-toggle');
+    const languageDropdown = document.getElementById('language-dropdown');
+    const currentLanguageSpan = document.getElementById('current-language');
+    
+    console.log('Language toggle found:', !!languageToggle);
+    console.log('Language dropdown found:', !!languageDropdown);
+    console.log('Current language span found:', !!currentLanguageSpan);
+    
+    if (languageToggle && languageDropdown && currentLanguageSpan) {
+        // Toggle dropdown on click instead of just hover
+        languageToggle.addEventListener('click', function(e) {
+            console.log('Language toggle clicked!');
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const isVisible = !languageDropdown.classList.contains('invisible');
+            console.log('Dropdown currently visible:', isVisible);
+            
+            if (isVisible) {
+                console.log('Hiding dropdown...');
+                hideLanguageDropdown();
+            } else {
+                console.log('Showing dropdown...');
+                showLanguageDropdown();
             }
         });
         
-
+        // Handle language option clicks
+        const languageOptions = document.querySelectorAll('.language-option');
+        languageOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                const flag = this.getAttribute('data-flag');
+                
+                if (lang && lang !== currentLang) {
+                    switchLanguage(lang, flag);
+                }
+                
+                hideLanguageDropdown();
+            });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
+                hideLanguageDropdown();
+            }
+        });
     }
-});
+    
+    // Mobile language switcher
+    const mobileLanguageOptions = document.querySelectorAll('.mobile-language-option');
+    mobileLanguageOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            const flag = this.getAttribute('data-flag');
+            
+            if (lang && lang !== currentLang) {
+                switchLanguage(lang, flag);
+            }
+        });
+    });
+}
+
+function showLanguageDropdown() {
+    console.log('showLanguageDropdown called');
+    const dropdown = document.getElementById('language-dropdown');
+    const arrow = document.querySelector('#language-toggle svg');
+    console.log('Dropdown element:', dropdown);
+    console.log('Arrow element:', arrow);
+    
+    if (dropdown) {
+        // Remove hidden classes
+        dropdown.classList.remove('invisible', 'opacity-0');
+        // Add a custom class for testing and force visibility
+        dropdown.classList.add('dropdown-open');
+        // Force visibility with inline styles to override CSS
+        dropdown.style.setProperty('visibility', 'visible', 'important');
+        dropdown.style.setProperty('opacity', '1', 'important');
+        dropdown.style.setProperty('pointer-events', 'auto', 'important');
+        dropdown.style.setProperty('z-index', '9999', 'important');
+        
+        console.log('Dropdown classes after show:', dropdown.className);
+        console.log('Dropdown styles after show:', {
+            visibility: dropdown.style.visibility,
+            opacity: dropdown.style.opacity,
+            pointerEvents: dropdown.style.pointerEvents,
+            zIndex: dropdown.style.zIndex
+        });
+    }
+    if (arrow) {
+        arrow.style.setProperty('transform', 'rotate(180deg)', 'important');
+        console.log('Arrow transform after show:', arrow.style.transform);
+    }
+}
+
+function hideLanguageDropdown() {
+    const dropdown = document.getElementById('language-dropdown');
+    const arrow = document.querySelector('#language-toggle svg');
+    if (dropdown) {
+        // Add hidden classes
+        dropdown.classList.add('invisible', 'opacity-0');
+        dropdown.classList.remove('opacity-100', 'dropdown-open');
+        // Force hiding with inline styles to override CSS
+        dropdown.style.setProperty('visibility', 'hidden', 'important');
+        dropdown.style.setProperty('opacity', '0', 'important');
+        dropdown.style.setProperty('pointer-events', 'none', 'important');
+    }
+    if (arrow) {
+        arrow.style.setProperty('transform', 'rotate(0deg)', 'important');
+    }
+}
+
+function getCurrentLanguage() {
+    // Try to get language from URL path
+    const path = window.location.pathname;
+    const langMatch = path.match(/^\/([a-z]{2})\//);
+    
+    if (langMatch) {
+        return langMatch[1];
+    }
+    
+    // Fallback to localStorage
+    const storedLang = localStorage.getItem('language');
+    if (storedLang && ['en', 'el', 'de', 'bg'].includes(storedLang)) {
+        return storedLang;
+    }
+    
+    // Default to English
+    return 'en';
+}
+
+function updateLanguageUI(lang) {
+    // Update current language display
+    const currentLanguageSpan = document.getElementById('current-language');
+    if (currentLanguageSpan) {
+        const langMap = {
+            'en': 'EN',
+            'el': 'EL',
+            'de': 'DE',
+            'bg': 'BG'
+        };
+        currentLanguageSpan.textContent = langMap[lang] || 'EN';
+    }
+    
+    // Update mobile language options styling
+    const mobileOptions = document.querySelectorAll('.mobile-language-option');
+    mobileOptions.forEach(option => {
+        const optionLang = option.getAttribute('data-lang');
+        if (optionLang === lang) {
+            option.classList.add('bg-primary', 'text-white');
+            option.classList.remove('text-gray-500', 'hover:bg-gray-100');
+        } else {
+            option.classList.remove('bg-primary', 'text-white');
+            option.classList.add('text-gray-500', 'hover:bg-gray-100');
+        }
+    });
+    
+    // Store in localStorage
+    localStorage.setItem('language', lang);
+}
+
+function switchLanguage(lang, flag) {
+    console.log('Switching to language:', lang);
+    
+    // Update UI immediately
+    updateLanguageUI(lang);
+    
+    // Get current URL and construct new language URL
+    const currentUrl = window.location.href;
+    const currentPath = window.location.pathname;
+    
+    // Remove current language prefix if it exists
+    let newPath = currentPath.replace(/^\/[a-z]{2}\//, '/');
+    
+    // Add new language prefix (except for English which is the default)
+    if (lang !== 'en') {
+        newPath = '/' + lang + newPath;
+    }
+    
+    // Ensure path starts with /
+    if (!newPath.startsWith('/')) {
+        newPath = '/' + newPath;
+    }
+    
+    // Construct new URL
+    const newUrl = window.location.origin + newPath + window.location.search + window.location.hash;
+    
+    // Navigate to new language
+    if (newUrl !== currentUrl) {
+        window.location.href = newUrl;
+    }
+    
+    // Update flatpickr locale if available
+    if (window.updateFlatpickrLocale) {
+        try {
+            window.updateFlatpickrLocale(lang);
+        } catch (error) {
+            console.warn('Failed to update flatpickr locale:', error);
+        }
+    }
+}
