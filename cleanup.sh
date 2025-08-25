@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# Maria Rooms Website Deployment Script
-# This script copies built files and commits/pushes them to GitHub
+# Maria Rooms Website Cleanup Script
+# This script removes old deployment files and keeps only recent ones
 
 set -e  # Exit on any error
 
-echo "🚀 Starting Maria Rooms website deployment..."
+echo "🧹 Starting cleanup of old deployment files..."
 
 # Configuration
 REPO_DIR="/Users/georgetzinos/projects/maria-rooms.github.io"
-BUILD_SOURCE_DIR=""  # Set this to your build output directory
-COMMIT_MESSAGE="Update website: $(date '+%Y-%m-%d %H:%M:%S')"
+DAYS_TO_KEEP=30  # Keep files from last 30 days
 
 # Colors for output
 RED='\033[0;31m'
@@ -45,9 +44,8 @@ if [ ! -d ".git" ]; then
     exit 1
 fi
 
-# Clean up old deployment files before committing
-print_status "🧹 Cleaning up old deployment files..."
-DAYS_TO_KEEP=30  # Keep files from last 30 days
+print_status "Current directory: $(pwd)"
+print_status "Keeping files from last $DAYS_TO_KEEP days..."
 
 # Function to get file age in days
 get_file_age() {
@@ -71,6 +69,8 @@ if [ -n "$sw_files" ]; then
         fi
     done
     print_status "Kept most recent service worker file"
+else
+    print_warning "No service worker files found"
 fi
 
 # Clean up old favicon files (keep only the most recent)
@@ -85,6 +85,8 @@ if [ -n "$favicon_files" ]; then
         fi
     done
     print_status "Kept most recent favicon file"
+else
+    print_warning "No favicon files found"
 fi
 
 # Clean up old JavaScript files in js/ directory
@@ -100,7 +102,11 @@ if [ -d "js" ]; then
             fi
         done
         print_status "Kept most recent JavaScript files"
+    else
+        print_warning "No JavaScript files found in js/ directory"
     fi
+else
+    print_warning "js/ directory not found"
 fi
 
 # Clean up old deployment tracker files
@@ -115,59 +121,13 @@ if [ -n "$tracker_files" ]; then
         fi
     done
     print_status "Kept most recent deployment tracker file"
-fi
-
-print_status "✅ Cleanup completed! Old deployment files removed."
-
-# Check git status after cleanup
-print_status "Checking git status after cleanup..."
-git status --porcelain
-
-# If there are no changes after cleanup, exit
-if [ -z "$(git status --porcelain)" ]; then
-    print_warning "No changes to commit after cleanup. Exiting."
-    exit 0
-fi
-
-# Add all files
-print_status "Adding all files to git..."
-git add .
-
-# Count removed files for commit message
-removed_count=$(git status --porcelain | grep "^ D" | wc -l | tr -d ' ')
-if [ "$removed_count" -gt 0 ]; then
-    COMMIT_MESSAGE="$COMMIT_MESSAGE (cleaned up $removed_count old files)"
-fi
-
-# Commit changes
-print_status "Committing changes..."
-git commit -m "$COMMIT_MESSAGE"
-
-# Check current remote
-print_status "Current remote configuration:"
-git remote -v
-
-# Ensure we're using the correct SSH host for geotzinosb account
-print_status "Ensuring correct SSH configuration..."
-if ! git remote get-url origin | grep -q "github-geotzinosb"; then
-    print_status "Updating remote to use correct SSH key..."
-    git remote set-url origin git@github-geotzinosb:geotzinosb/maria-rooms.github.io.git
-fi
-
-# Push to main branch
-print_status "Pushing to main branch..."
-if git push origin main; then
-    print_status "✅ Successfully pushed to GitHub!"
-    print_status "🌐 Your website should be updated at: https://geotzinosb.github.io/maria-rooms.github.io/"
 else
-    print_error "❌ Failed to push to GitHub"
-    print_error "This might be due to permission issues."
-    print_error "Please ensure you have write access to the repository."
-    print_error "Options:"
-    print_error "  1. Get added as a collaborator by the repository owner"
-    print_error "  2. Use the correct GitHub account credentials"
-    print_error "  3. Check your SSH key configuration"
-    exit 1
+    print_warning "No deployment tracker files found"
 fi
 
-echo "🎉 Deployment completed successfully!"
+# Show what files remain
+print_status "Files remaining after cleanup:"
+ls -la | grep -E "\.(js|html|xml|ico)$" | head -10
+
+print_status "Cleanup completed! Old deployment files have been removed."
+print_status "Only files from the last $DAYS_TO_KEEP days have been kept."
