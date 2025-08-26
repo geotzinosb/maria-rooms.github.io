@@ -1,0 +1,81 @@
+/* Ultra-critical CSS for above-the-fold content */
+/* This CSS is inlined for immediate rendering */
+
+/* Reset and base styles */
+* { box-sizing: border-box; }
+html { font-size: 16px; line-height: 1.5; }
+body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+/* Critical hero section styles */
+.hero-swiper { position: relative; width: 100%; height: 100vh; overflow: hidden; }
+.hero-swiper .swiper-slide { position: relative; width: 100%; height: 100%; }
+.hero-swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-swiper .swiper-slide .bg-gradient-to-t { 
+    position: absolute; bottom: 0; left: 0; right: 0; height: 50%; 
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent); 
+}
+
+/* Critical typography */
+.text-white { color: #ffffff !important; }
+.text-4xl { font-size: 2.25rem !important; line-height: 2.5rem !important; }
+.text-xl { font-size: 1.25rem !important; line-height: 1.75rem !important; }
+.text-base { font-size: 1rem !important; line-height: 1.5rem !important; }
+.font-bold { font-weight: 700 !important; }
+.text-center { text-align: center !important; }
+
+/* Critical layout */
+.min-h-screen { min-height: 100vh !important; }
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+.inset-0 { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
+.z-10 { z-index: 10 !important; }
+
+/* Critical spacing */
+.px-4 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.py-8 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+.mb-4 { margin-bottom: 1rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+
+/* Critical components */
+.max-w-4xl { max-width: 56rem !important; }
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.bg-black { background-color: #000000 !important; }
+.bg-opacity-50 { background-color: rgba(0, 0, 0, 0.5) !important; }
+.rounded-lg { border-radius: 0.5rem !important; }
+.p-6 { padding: 1.5rem !important; }
+
+/* Critical display */
+.hidden { display: none !important; }
+.block { display: block !important; }
+.flex { display: flex !important; }
+.items-center { align-items: center !important; }
+.justify-center { justify-content: center !important; }
+
+/* Critical buttons */
+.bg-primary { background-color: #2563eb !important; }
+.hover\:bg-primary\/90:hover { background-color: #1d4ed8 !important; }
+.px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.py-3 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+.rounded-md { border-radius: 0.375rem !important; }
+.font-semibold { font-weight: 600 !important; }
+
+/* Critical transitions */
+.transition { transition: all 0.15s ease-in-out !important; }
+.duration-300 { transition-duration: 0.3s !important; }
+.transform { transform: translateZ(0) !important; }
+.hover\:scale-105:hover { transform: scale(1.05) translateZ(0) !important; }
+
+/* Critical shadows */
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important; }
+.hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important; }
+
+/* Critical spacing utilities */
+.space-x-4 > * + * { margin-left: 1rem !important; }
+
+/* Critical mobile styles */
+@media (max-width: 768px) {
+    .text-4xl { font-size: 1.875rem !important; line-height: 2.25rem !important; }
+    .text-xl { font-size: 1.125rem !important; line-height: 1.75rem !important; }
+    .px-4 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+    .py-8 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+}
