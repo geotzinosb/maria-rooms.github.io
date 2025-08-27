@@ -1,6 +1,5 @@
 // Mobile menu functionality
 // Maria Rooms JavaScript loaded!
-
 // Language translations
 window.translations = {
     en: {
@@ -264,18 +263,18 @@ window.translations = {
         apartmentTitle: "Διαμέρισμα",
         
         // Individual Apartment Details
-        studioApartment1: "Στούντιο 1 - Στούντιο με Βεράντα",
-        studioApartment1Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
-        studioApartment2: "Στούντιο 2 - Στούντιο με Βεράντα",
-        studioApartment2Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
-        studioApartment3: "Στούντιο 3 - Στούντιο με Βεράντα",
-        studioApartment3Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
-        studioApartment4: "Στούντιο 4 - Στούντιο με Βεράντα",
-        studioApartment4Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
-        studioApartment5: "Στούντιο 5 - Στούντιο με Βεράντα",
-        studioApartment5Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
-        studioApartment6: "Στούντιο 6 - Στούντιο με Βεράντα",
-        studioApartment6Description: "Στούντιο 23m² με βεράντα και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
+        studioApartment1: "Στούντιο 1 - Στούντιο με Μπαλκόνι",
+        studioApartment1Description: "Στούντιο 23m² με μπαλκόνι και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
+        studioApartment2: "Στούντιο 2 - Στούντιο με Μπαλκόνι",
+        studioApartment2Description: "Στούντιο 23m² με μπαλκόνι και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
+        studioApartment3: "Στούντιο 3 - Στούντιο με Μπαλκόνι",
+        studioApartment3Description: "Στούντιο 23m² με μπαλκόνι και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
+        studioApartment4: "Στούντιο 4 - Στούντιο με Μπαλκόνι",
+        studioApartment4Description: "Στούντιο 23m² με μπαλκόνι και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
+        studioApartment5: "Στούντιο 5 - Στούντιο με Μπαλκόνι",
+        studioApartment5Description: "Στούντιο 23m² με μπαλκόνι και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
+        studioApartment6: "Στούντιο 6 - Στούντιο με Μπαλκόνι",
+        studioApartment6Description: "Στούντιο 23m² με μπαλκόνι και θέα στον κήπο. Κλιματισμός, επίπεδη τηλεόραση και πλήρως εξοπλισμένη κουζίνα.",
         maxGuests: "Μέγιστοι 2 επισκέπτες",
         
         // Amenities Section
@@ -1096,11 +1095,11 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.add('hidden');
             
             // Force styles with !important equivalent
-            mobileMenu.style.setProperty('z-index', '-1', 'important');
-            mobileMenu.style.setProperty('opacity', '0', 'important');
-            mobileMenu.style.setProperty('display', 'none', 'important');
-            mobileMenu.style.setProperty('visibility', 'hidden', 'important');
-            mobileMenu.style.setProperty('pointer-events', 'none', 'important');
+            // mobileMenu.style.setProperty('z-index', '-1', 'important');
+            // mobileMenu.style.setProperty('opacity', '0', 'important');
+            // mobileMenu.style.setProperty('display', 'none', 'important');
+            // mobileMenu.style.setProperty('visibility', 'hidden', 'important');
+            // mobileMenu.style.setProperty('pointer-events', 'none', 'important');
             
             console.log('Mobile menu initialized with hidden state and z-index:', mobileMenu.style.zIndex);
         }
@@ -1116,13 +1115,13 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.remove('hidden');
             
             // Force styles with !important equivalent
-            mobileMenu.style.setProperty('z-index', '9999', 'important');
-            mobileMenu.style.setProperty('opacity', '1', 'important');
-            mobileMenu.style.setProperty('display', 'block', 'important');
-            mobileMenu.style.setProperty('visibility', 'visible', 'important');
-            mobileMenu.style.setProperty('pointer-events', 'auto', 'important');
+            // mobileMenu.style.setProperty('z-index', '9999', 'important');
+            // mobileMenu.style.setProperty('opacity', '1', 'important');
+            // mobileMenu.style.setProperty('display', 'block', 'important');
+            // mobileMenu.style.setProperty('visibility', 'visible', 'important');
+            // mobileMenu.style.setProperty('pointer-events', 'auto', 'important');
             
-            document.body.style.overflow = 'hidden';
+            // document.body.style.overflow = 'hidden';
             console.log('Mobile menu shown with z-index:', mobileMenu.style.zIndex);
             
             // Force a reflow
@@ -1133,21 +1132,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function hideMobileMenu() {
         if (mobileMenu) {
             // Add hidden class
-            mobileMenu.classList.add('hidden');
             setTimeout(() => {
                 // Force styles with !important equivalent
-                mobileMenu.style.setProperty('z-index', '-1', 'important');
-                mobileMenu.style.setProperty('opacity', '0', 'important');
-                mobileMenu.style.setProperty('display', 'none', 'important');
-                mobileMenu.style.setProperty('visibility', 'hidden', 'important');
-                mobileMenu.style.setProperty('pointer-events', 'none', 'important');
+            mobileMenu.classList.add('hidden');
+                // mobileMenu.style.setProperty('z-index', '-1', 'important');
+                // mobileMenu.style.setProperty('opacity', '0', 'important');
+                // mobileMenu.style.setProperty('display', 'none', 'important');
+                // mobileMenu.style.setProperty('visibility', 'hidden', 'important');
+                // mobileMenu.style.setProperty('pointer-events', 'none', 'important');
                 
-                document.body.style.overflow = 'auto';
+                // document.body.style.overflow = 'auto';
+                mobileMenu.offsetHeight;
             }, 100);
             console.log('Mobile menu hidden with z-index:', mobileMenu.style.zIndex);
             
             // Force a reflow
-            mobileMenu.offsetHeight;
         }
     }
 
@@ -1161,9 +1160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add multiple event listeners for better compatibility
         const openMenu = () => {
-            console.log('Mobile menu button clicked, opening menu');
-            showMobileMenu();
-            
+            console.log('Mobile menu button clicked, opening menu');            
             // Double-check the menu state after a short delay
             setTimeout(() => {
                 const isVisible = !mobileMenu.classList.contains('hidden');
