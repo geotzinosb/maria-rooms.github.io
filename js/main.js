@@ -381,6 +381,18 @@ window.translations = {
         languageSelector: "Language / Γλώσσα / Sprache / Език",
         contactUs: "Επικοινωνήστε μαζί μας",
         followUs: "Ακολουθήστε μας",
+        
+        // Why Choose Maria Rooms Section
+        whyChooseTitle: "Γιατί να επιλέξετε τα Maria Rooms;",
+        whyChooseSubtitle: "Ανακαλύψτε τι κάνει τα διαμερίσματα διακοπών μας την ιδανική επιλογή για τις ελληνικές σας διακοπές",
+        perfectLocationTitle: "Ιδανική τοποθεσία",
+        perfectLocationDesc: "Μόλις 650μ από την όμορφη παραλία, 100μ από τον κύριο δρόμο για ήσυχο ύπνο, περιτριγυρισμένα από ένα μικρό δάσος για φυσική ομορφιά.",
+        ultimateComfortTitle: "Μέγιστη άνεση",
+        ultimateComfortDesc: "Πλήρως εξοπλισμένα στούντιο με κλιματισμό, επίπεδες τηλεοράσεις, ιδιωτικούς μπαλκονιές και όλα όσα χρειάζεστε για μια άνετη διαμονή.",
+        authenticExperienceTitle: "Αυθεντική εμπειρία",
+        authenticExperienceDesc: "Βυθιστείτε στην τοπική κουλτούρα με την ελληνική φιλοξενία, την παραδοσιακή αρχιτεκτονική και την αυθεντική ατμόσφαιρα του χωριού.",
+        specialOfferTitle: "Ειδική καλοκαιρινή προσφορά",
+        specialOfferDesc: "Κλείστε τώρα τη διαμονή σας και απολαύστε τους περιορισμένους μας τιμές διαθεσιμότητας. Ιδανικό για οικογένειες, ζευγάρια και μοναχικούς ταξιδιώτες!",
     },
     de: {
         // Navigation
@@ -570,6 +582,18 @@ window.translations = {
         languageSelector: "Sprache / Γλώσσα / Sprache / Език",
         contactUs: "Kontaktieren Sie uns",
         followUs: "Folgen Sie uns",
+        
+        // Why Choose Maria Rooms Section
+        whyChooseTitle: "Warum Maria Rooms wählen?",
+        whyChooseSubtitle: "Entdecken Sie, was unsere Ferienwohnungen zur perfekten Wahl für Ihren griechischen Urlaub macht",
+        perfectLocationTitle: "Perfekte Lage",
+        perfectLocationDesc: "Nur 650m vom wunderschönen Strand entfernt, 100m von der Hauptstraße für ruhigen Schlaf, umgeben von einem kleinen Wald für natürliche Schönheit.",
+        ultimateComfortTitle: "Maximaler Komfort",
+        ultimateComfortDesc: "Voll ausgestattete Studios mit Klimaanlage, Flachbildfernsehern, privaten Balkonen und allem, was Sie für einen komfortablen Aufenthalt benötigen.",
+        authenticExperienceTitle: "Authentische Erfahrung",
+        authenticExperienceDesc: "Tauchen Sie ein in die lokale Kultur mit griechischer Gastfreundschaft, traditioneller Architektur und authentischer Dorfatmosphäre.",
+        specialOfferTitle: "Spezielles Sommerangebot",
+        specialOfferDesc: "Buchen Sie jetzt Ihren Aufenthalt und genießen Sie unsere begrenzten Verfügbarkeitsraten. Perfekt für Familien, Paare und Alleinreisende!",
     },
     bg: {
         // Navigation
@@ -751,6 +775,18 @@ window.translations = {
         languageSelector: "Language / Γλώσσα / Sprache / Език",
         contactUs: "Свържете се с нас",
         followUs: "Последвайте ни",
+        
+        // Why Choose Maria Rooms Section
+        whyChooseTitle: "Защо да изберете Maria Rooms?",
+        whyChooseSubtitle: "Открийте какво прави нашите апартаменти за почивка идеалният избор за вашата гръцка почивка",
+        perfectLocationTitle: "Перфектно местоположение",
+        perfectLocationDesc: "Само на 650м от красивата плажа, 100м от главния път за спокоен сън, заобиколени от малка гора за природна красота.",
+        ultimateComfortTitle: "Максимален комфорт",
+        ultimateComfortDesc: "Напълно оборудвани студия с климатик, плоскоекранни телевизори, частни балкони и всичко необходимо за комфортен престой.",
+        authenticExperienceTitle: "Автентично преживяване",
+        authenticExperienceDesc: "Потопете се в местната култура с гръцкото гостоприемство, традиционната архитектура и автентичната селска атмосфера.",
+        specialOfferTitle: "Специална лятна оферта",
+        specialOfferDesc: "Резервирайте престоя си сега и се насладете на нашите ограничени тарифи за наличност. Перфектно за семейства, двойки и самостоятелни пътешественици!",
     }
 };
 
