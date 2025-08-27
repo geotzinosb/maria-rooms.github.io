@@ -1098,15 +1098,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mobileMenu) {
             // Add hidden class
             mobileMenu.classList.add('hidden');
-            
-            // Force styles with !important equivalent
-            mobileMenu.style.setProperty('z-index', '-1', 'important');
-            mobileMenu.style.setProperty('opacity', '0', 'important');
-            mobileMenu.style.setProperty('display', 'none', 'important');
-            mobileMenu.style.setProperty('visibility', 'hidden', 'important');
-            mobileMenu.style.setProperty('pointer-events', 'none', 'important');
-            
-            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                // Force styles with !important equivalent
+                mobileMenu.style.setProperty('z-index', '-1', 'important');
+                mobileMenu.style.setProperty('opacity', '0', 'important');
+                mobileMenu.style.setProperty('display', 'none', 'important');
+                mobileMenu.style.setProperty('visibility', 'hidden', 'important');
+                mobileMenu.style.setProperty('pointer-events', 'none', 'important');
+                
+                document.body.style.overflow = 'auto';
+            }, 100);
             console.log('Mobile menu hidden with z-index:', mobileMenu.style.zIndex);
             
             // Force a reflow
